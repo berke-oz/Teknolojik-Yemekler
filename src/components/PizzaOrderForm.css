@@ -4,14 +4,23 @@
     height: 100vh;
 
 
+
+}
+
+.pizza-description {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 0.9rem;
 }
 
 
 .pizza-order-form {
     width: 300%;
-    max-width: 600px;
+    height: 1500px;
+    max-width: 500px;
     padding: 40px;
     background-color: #eee;
+    gap: 50px;
 
 }
 
@@ -41,14 +50,148 @@
 
 
 
-
 #hamur {
-    width: 150px;
-    /* Genişliği küçültme */
+    width: 85px;
     padding: 5px 10px;
-    /* İçerik boşluklarını ayarlama */
-    font-size: 14px;
-    /* Yazı boyutunu küçültme */
+    font-size: 13px;
     height: 35px;
-    /* Yüksekliği küçültme */
+}
+
+.size-dough-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.size-dough-section legend {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.size-section input {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.size-section label {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.dough-section {
+    margin-top: 0px;
+    text-align: left;
+    margin-right: 9px;
+}
+
+.dough-section select {
+    margin-top: -25px;
+    margin-right: 10px;
+}
+
+.ekstra-malzemeler {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ekstra-malzemeler label {
+    display: flex;
+    align-items: center;
+    font-style: unset;
+    font-size: 15px;
+    gap: 10px;
+}
+
+
+
+
+.form-group h5 {
+    margin-top: 48px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.adet-secimi {
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 130px;
+    margin-top: 80 px;
+
+
+}
+
+.adet-secimi-label {
+    margin-top: 6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.adet-secimi button {
+    width: 40px;
+    height: 40px;
+    background-color: #FDC913;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.adet-secimi input[type="number"] {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+
+}
+
+
+
+.card-siparis-ozeti {
+    margin-left: 160px;
+    margin-top: -6rem;
+    background-color: #f9f9f9;
+    width: 18rem;
+    height: 23rem;
+
+
+}
+
+.card-siparis-ozeti button {
+    background-color: #FDC913;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 130px;
+    margin-left: -1rem;
+    width: 285px;
+    height: 65px;
+}
+
+.alici-isim {
+    margin-top: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-siparis-ozeti-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.card-siparis-ozeti-secimler {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #555555;
+    font-size: 16px;
+
 }
