@@ -1,3 +1,54 @@
-form{
-    text-align: center
+.form-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+
+}
+
+
+.pizza-order-form {
+    width: 300%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: #eee;
+
+}
+
+.pizza-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.pizza-price-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.rating {
+    margin-top: 0.8rem;
+}
+
+
+
+
+
+#hamur {
+    width: 150px;
+    /* Genişliği küçültme */
+    padding: 5px 10px;
+    /* İçerik boşluklarını ayarlama */
+    font-size: 14px;
+    /* Yazı boyutunu küçültme */
+    height: 35px;
+    /* Yüksekliği küçültme */
 }
