@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #CE2829;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 4rem;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.center-container img {
+    width: 25%;
+
+
+}
+
+.center-container p {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    color: yellow;
+    font-family: 'Satisfy';
+    margin-bottom: 0px;
+}
+
+.center-container hr {
+    color: white;
+    background-color: white;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.center-container h4 {
+    font-size: 4rem;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: 5rem;
+    font-weight: 200;
+
+}
+
+.siparis-ozeti {
+    display: flex;
+    flex-direction: column;
+    gap: 1 px;
+    padding: 20px;
+    padding-top: 3rem;
+
+}
+
+.siparis-ozeti h5 {
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.siparis-ozeti p {
+    width: 1;
+    font-family: 'Roboto Condensed';
+    font-weight: 200;
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 40px;
+
+}
+
+.siparis-ozeti span {
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    color: white;
+    width: 20;
+}
+
+
+.siparis-ozeti .card {
+    width: 330px;
+    height: 180px;
+    margin-top: 5rem;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.siparis-ozeti .card h6 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    color: white;
+    padding-top: 0.5rem;
+}
+
+.siparis-ozeti .card strong {
+    color: black;
+    font-size: 1.3rem;
+    margin-left: -2rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 200;
+    color: white;
+
+}
+
+.siparis-ozeti .card span {
+    color: black;
+    font-size: 1.3 rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    margin-left: 8rem;
+
+}
