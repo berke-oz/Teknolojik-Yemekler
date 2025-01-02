@@ -1,4 +1,4 @@
-body {
+.order-conformation-page {
     margin: 0;
     height: 100%;
     background-color: #CE2829;
@@ -22,14 +22,10 @@ body {
 
 }
 
-.error {
-    color: red;
-    font-size: 1rem;
-    margin-top: 0.5em;
-}
+
 
 .center-container p {
-    margin-top: 5rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
     color: yellow;
     font-family: 'Satisfy';

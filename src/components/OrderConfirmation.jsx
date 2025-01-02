@@ -7,7 +7,7 @@ export default function OrderConfirmation({ orderData }) {
 
 
     return (
-        <>
+        <div className="order-conformation-page">
 
             <div className="center-container">
                 <img src="/images/iteration-1-images/logo.svg" alt="" />
@@ -38,7 +38,7 @@ export default function OrderConfirmation({ orderData }) {
             </div>
 
 
-        </>
+        </div>
     );
 
 }
