@@ -21,7 +21,7 @@ export default function OrderConfirmation({ orderData }) {
                     <p>Boyut: <span>{orderData.boyut}</span> </p>
                     <p>Hamur: <span>{orderData.hamur}</span></p>
                     <p>Ek Malzemeler: <span>{orderData.malzemeler.join(", ")}</span></p>
-                    <p>Hızlı Siparş: <span>{orderData.hizliSiparis ? "Evet" : "Hayır"}</span></p>
+                    <p>Hızlı Teslimat: <span>{orderData.hizliSiparis ? "Evet" : "Hayır"}</span></p>
                     <Card>
                         <CardBody>
                             <CardTitle tag="h6">

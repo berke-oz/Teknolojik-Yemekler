@@ -185,7 +185,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                     </div>
                     <div className="form-group">
                         <h5>Ekstra Malzemeler</h5>
-                        <p>En fazla 10 malzeme seçebilirsiniz! 5₺</p>
+                        <p>En az 4, en fazla 10 malzeme seçebilirsiniz! 5₺</p>
                         <div className="ekstra-malzemeler">
                             {malzemeListesi.map((malzeme, index) => {
                                 return (
