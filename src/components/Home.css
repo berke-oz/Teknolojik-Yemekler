@@ -46,3 +46,27 @@ h3 {
     font-family: 'Roboto Condensed';
     border-radius: 30px;
 }
+
+@media (max-width: 768px) {
+    .home-page {
+        padding: 1rem;
+
+    }
+
+    img {
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+        text-align: center;
+
+    }
+
+
+    .container button {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}

@@ -1,7 +1,7 @@
 .form-container {
     display: flex;
     justify-content: center;
-    height: 230vh;
+    height: 250vh;
     background-color: white;
 
 
@@ -127,7 +127,8 @@
 }
 
 .adet-secimi-label {
-    margin-top: 6rem;
+    margin-top: 3rem;
+    font-size: 1.3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -136,7 +137,7 @@
     height: 40px;
     background-color: #FDC913;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,9 +172,9 @@
     font-family: 'Roboto Condensed';
     font-weight: 600;
     text-align: center;
-    margin-top: 85px;
+    margin-top: 3rem;
     margin-left: -1rem;
-    width: 285px;
+    width: 287px;
     height: 45px;
 
 }
@@ -183,11 +184,9 @@
     font-family: 'Roboto Condensed';
 }
 
-.card-siparis-ozeti-title h5 {}
-
 .card-siparis-ozeti-secimler,
 .card-siparis-ozeti-toplam-fiyat {
-    margin-top: 2rem;
+    margin-top: 0rem;
     font-family: 'Roboto Condensed';
     font-weight: 300;
     font-size: 1.2rem;
@@ -203,4 +202,70 @@
     font-family: 'Roboto Condensed';
     font-weight: 400;
 
+}
+
+@media (max-width: 980px) {
+
+    .pizza-order-form {
+        padding: rem;
+    }
+
+    .pizza-price-rating {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .size-dough-section {
+        gap: 25px;
+
+    }
+
+    .ekstra-malzemeler {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    }
+
+    .adet-secimi {
+        gap: 5px;
+    }
+
+
+    .card-siparis-ozeti {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 10px;
+
+    }
+
+    .card-siparis-ozeti button {
+        width: 80%;
+        margin-left: 1.5rem;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .adet-secimi {
+        justify-content: center;
+        text-align: center;
+        margin-left: 5rem;
+        margin-top: 5px;
+        gap: 2px;
+    }
+
+    .adet-secimi-label {
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 8rem;
+        font-size: 1.3rem;
+    }
+
+    .card-pizza-order button {
+        border-radius: 10px;
+        margin-top: 2rem;
+        height: 3rem;
+        width: 19rem;
+        margin-left: -1.6rem;
+
+    }
 }

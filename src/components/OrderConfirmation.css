@@ -122,4 +122,82 @@
     text-align: left;
     margin-left: 8rem;
 
+
+}
+
+@media (max-width: 480px) {
+    .center-container {
+        margin-top: 2rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .center-container img {
+        width: 60%;
+
+    }
+
+    .center-container h4 {
+        font-size: 3rem;
+
+    }
+
+    .center-container p {
+        font-size: 1.2rem;
+
+    }
+
+    .center-container hr {
+        width: 80%;
+
+    }
+
+    .siparis-ozeti {
+        padding: 1rem;
+        gap: 10px;
+
+    }
+
+    .siparis-ozeti h5 {
+        font-size: 1.5rem;
+
+    }
+
+    .siparis-ozeti p {
+        font-size: 0.9rem;
+
+        margin-left: 10px;
+
+        text-align: center;
+
+    }
+
+    .siparis-ozeti .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
+        padding: 1rem;
+        border: 1px solid white;
+    }
+
+    .siparis-ozeti .card h6 {
+        font-size: 1.2rem;
+    }
+
+    .siparis-ozeti .card strong {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .siparis-ozeti .card span {
+        font-size: 1rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .siparis-ozeti span {
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+    }
 }

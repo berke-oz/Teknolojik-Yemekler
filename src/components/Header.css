@@ -1,0 +1,23 @@
+.header {
+    background-color: #CE2829;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.header img {
+    width: 26rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 780px) {
+
+    .header img {
+        width: 15rem;
+        margin-top: 2rem;
+    }
+
+
+}
