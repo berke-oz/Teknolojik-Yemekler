@@ -21,6 +21,7 @@ export default function OrderConfirmation({ orderData }) {
                     <p>Boyut: <span>{orderData.boyut}</span> </p>
                     <p>Hamur: <span>{orderData.hamur}</span></p>
                     <p>Ek Malzemeler: <span>{orderData.malzemeler.join(", ")}</span></p>
+                    <p>Hızlı Siparş: <span>{orderData.hizliSiparis ? "Evet" : "Hayır"}</span></p>
                     <Card>
                         <CardBody>
                             <CardTitle tag="h6">
@@ -30,7 +31,7 @@ export default function OrderConfirmation({ orderData }) {
                                 <strong>Seçimler:<span>{orderData.malzemeler.length * 5}₺</span></strong>
                             </CardText>
                             <CardText >
-                                <strong>Toplam : <span>{(85.5 * orderData.adet) + (orderData.malzemeler.length * 5)}₺</span></strong>
+                                <strong>Toplam : <span>{(85.5 * orderData.adet) + (orderData.malzemeler.length * 5) + (orderData.hizliSiparis ? 50 : 0)}₺</span></strong>
                             </CardText>
                         </CardBody>
                     </Card>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Card, CardBody, CardTitle, CardSubtitle, CardText, Form, FormGroup, Input, Label } from 'reactstrap';
 import './PizzaOrderForm.css'
 import Header from "./Header";
+import axios from "axios"
+
 
 
 
@@ -14,6 +16,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
         malzemeler: [],
         siparisNotu: "",
         adet: 1,
+        hizliSiparis: false,
     });
 
     const [errors, setErrors] = useState({});
@@ -35,7 +38,13 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        if (type === "checkbox") {
+        if (type === "checkbox" && name === "hizlisiparis") {
+            setFormData((prev) => ({
+                ...prev,
+                hizliSiparis: checked,
+            }))
+        }
+        if (type === "checkbox" && name === "ekstraMalzemeler") {
             setFormData((prev) => ({
                 ...prev,
                 malzemeler: checked
@@ -47,7 +56,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                 ...prev,
                 adet: Math.max(1, Number(value)),
             }));
-        } else if (name === hamur) {
+        } else if (name === "hamur") {
             setFormData((prev) => ({
                 ...prev,
                 hamur: value,
@@ -70,13 +79,22 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
         if (!formData.hamur) {
             newErrors.hamur = "Lütfen bir hamur türü seçin.";
         }
+        if (formData.malzemeler.length > 0 && formData.malzemeler.length < 4) {
+            newErrors.malzemeler = "En az 4 adet ekstra malzeme seçmelisiniz !"
+        }
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            onSubmitOrder(formData)
+            try {
+                const response = await axios.post("https://reqres.in/api/pizza", formData);
+                console.log(response.data);
+                onSubmitOrder(formData);
+            } catch (error) {
+                console.log("Hata oluştu.", error)
+            }
         }
 
 
@@ -175,6 +193,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                                         <Label>
                                             <Input
                                                 type="checkbox"
+                                                name="ekstraMalzemeler"
                                                 value={malzeme}
                                                 onChange={handleChange}
                                                 disabled={formData.malzemeler.length >= 10 && !formData.malzemeler.includes(malzeme)}
@@ -185,6 +204,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                                 );
                             })}
                         </div>
+                        {errors.malzemeler && <p className="error">{errors.malzemeler}</p>}
                     </div>
                     <div className="form-group">
                         <Label>Sipariş Notu</Label>
@@ -208,6 +228,20 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                             required
                         />
                         {errors.isim && <p className="error">{errors.isim}</p>}
+                    </div>
+                    <div className="form-group">
+                        <FormGroup className="hizli-siparis">
+                            <Label>
+                                <Input
+                                    type="checkbox"
+                                    name="hizlisiparis"
+                                    id="hizlisiparis"
+                                    onChange={handleChange}
+
+                                />
+                                Hızlı Teslimat (Ekstra 50₺)
+                            </Label>
+                        </FormGroup>
                     </div>
                     <div className="form-group">
                         <Label className="adet-secimi-label">Adet</Label>
@@ -249,24 +283,24 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
 
                         >
 
-                            <CardBody>
+                            <CardBody className="card-pizza-order">
                                 <CardTitle className="card-siparis-ozeti-title" tag="h5">
                                     Sipariş Toplamı
                                 </CardTitle>
                                 <CardText className="card-siparis-ozeti-secimler">
-                                    <strong>Seçimler:</strong> {formData.malzemeler.length * 5 || "0"}₺
+                                    <strong>Seçimler:</strong> {formData.malzemeler.length > 0 ? formData.malzemeler.length * 5 : "0"}₺
                                 </CardText>
                                 <CardText className="card-siparis-ozeti-toplam-fiyat">
-                                    <strong>Toplam:</strong> {(85.5 * formData.adet) + (formData.malzemeler.length * 5)} ₺
+                                    <strong>Toplam:</strong>  {(85.5 * formData.adet) + (formData.malzemeler.length * 5) + (formData.hizliSiparis ? 50 : 0)} ₺
                                 </CardText>
-                                <Button color="primary">
+                                <Button color="primary" type="submit">
                                     SİPARİŞ VER
                                 </Button>
                             </CardBody>
                         </Card>
                     </div>
-                </Form>
-            </div>
+                </Form >
+            </div >
         </>
     );
 }

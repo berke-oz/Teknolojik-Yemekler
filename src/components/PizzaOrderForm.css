@@ -1,7 +1,8 @@
 .form-container {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 230vh;
+    background-color: white;
 
 
 
@@ -19,7 +20,7 @@
     height: 1500px;
     max-width: 500px;
     padding: 40px;
-    background-color: #eee;
+    background-color: white;
     gap: 50px;
 
 }
@@ -161,37 +162,45 @@
     margin-top: -6rem;
     background-color: #f9f9f9;
     width: 18rem;
-    height: 23rem;
-
-
+    height: 17rem;
 }
 
 .card-siparis-ozeti button {
     background-color: #FDC913;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto Condensed';
+    font-weight: 600;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 85px;
     margin-left: -1rem;
     width: 285px;
-    height: 65px;
+    height: 45px;
+
 }
 
 .alici-isim {
     margin-top: 3rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto Condensed';
 }
 
-.card-siparis-ozeti-title {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    font-size: 20px;
+.card-siparis-ozeti-title h5 {}
+
+.card-siparis-ozeti-secimler,
+.card-siparis-ozeti-toplam-fiyat {
+    margin-top: 2rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
-.card-siparis-ozeti-secimler {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #555555;
-    font-size: 16px;
+.error {
+    color: red;
+    font-style: italic;
+}
+
+.hizli-siparis {
+    margin-top: 1.3rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
 
 }

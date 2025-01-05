@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div>
-      {currentPage === "home" && <Home onButtonClick={handlePageChange} />} {Home}
-      {currentPage === "order" && <PizzaOrderForm onSubmitOrder={handleOrderSubmit} />} {PizzaOrderForm}
-      {currentPage === "confirmation" && <OrderConfirmation orderData={orderData} />} {OrderConfirmation}
+      {currentPage === "home" && <Home onButtonClick={handlePageChange} />}
+      {currentPage === "order" && <PizzaOrderForm onSubmitOrder={handleOrderSubmit} />}
+      {currentPage === "confirmation" && <OrderConfirmation orderData={orderData} />}
     </div>
   );
 }
