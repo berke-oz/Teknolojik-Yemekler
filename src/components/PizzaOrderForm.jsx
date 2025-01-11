@@ -3,6 +3,7 @@ import { Button, Card, CardBody, CardTitle, CardSubtitle, CardText, Form, FormGr
 import './PizzaOrderForm.css'
 import Header from "./Header";
 import axios from "axios"
+import Footer from "./Footer";
 
 
 
@@ -106,8 +107,9 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
             <header>
                 <Header />
             </header>
-            <header></header>
+            <img className="order-form-pizza" src="./images/iteration-2-images/pictures/form-banner.png" alt="" />
             <div className="form-container">
+
                 <Form className="pizza-order-form" onSubmit={handleSubmit}>
                     <div className="pizza-name">
                         <h5>Position Absolute Acı Pizza</h5>
@@ -126,86 +128,90 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                     <div className="size-dough-section">
                         <div className="size-section">
                             <legend>Boyut Seç</legend>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input
+                            <div className="button-group">
+                                <label className={`circle-button ${formData.boyut === "Küçük" ? "selected" : ""}`}>
+                                    <input
                                         type="radio"
                                         name="boyut"
                                         value="Küçük"
                                         onChange={handleChange}
+                                        style={{ display: "none" }}
                                     />
-                                    Küçük
-                                </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input
+                                    S
+                                </label>
+                                <label className={`circle-button ${formData.boyut === "Orta" ? "selected" : ""}`}>
+                                    <input
                                         type="radio"
                                         name="boyut"
                                         value="Orta"
                                         onChange={handleChange}
+                                        style={{ display: "none" }}
                                     />
-                                    Orta
-                                </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                                <Label check>
-                                    <Input
+                                    M
+                                </label>
+                                <label className={`circle-button ${formData.boyut === "Büyük" ? "selected" : ""}`}>
+                                    <input
                                         type="radio"
                                         name="boyut"
                                         value="Büyük"
                                         onChange={handleChange}
+                                        style={{ display: "none" }}
                                     />
-                                    Büyük
-
-                                </Label>
-                            </FormGroup>
+                                    L
+                                </label>
+                            </div>
                             {errors.boyut && <p className="error">{errors.boyut}</p>}
                         </div>
 
                         <div className="dough-section">
                             <legend>Hamur Seç</legend>
-                            <FormGroup>
-                                <Label htmlFor="hamur"></Label>
-                                <Input
-                                    type="select"
+                            <div className="custom-select-wrapper">
+                                <select
                                     name="hamur"
                                     id="hamur"
                                     value={formData.hamur}
                                     onChange={handleChange}
+                                    className="custom-select"
                                 >
                                     <option value="" disabled>Hamur Kalınlığı</option>
                                     <option value="İnce">İnce</option>
                                     <option value="Normal">Normal</option>
                                     <option value="Kalın">Kalın</option>
-                                </Input>
-                            </FormGroup>
+                                </select>
+                            </div>
                             {errors.hamur && <p className="error">{errors.hamur}</p>}
                         </div>
+
                     </div>
                     <div className="form-group">
                         <h5>Ekstra Malzemeler</h5>
                         <p>En az 4, en fazla 10 malzeme seçebilirsiniz! 5₺</p>
-                        <div className="ekstra-malzemeler">
-                            {malzemeListesi.map((malzeme, index) => {
-                                return (
-                                    <FormGroup key={index}>
-                                        <Label>
-                                            <Input
-                                                type="checkbox"
-                                                name="ekstraMalzemeler"
-                                                value={malzeme}
-                                                onChange={handleChange}
-                                                disabled={formData.malzemeler.length >= 10 && !formData.malzemeler.includes(malzeme)}
-                                            />
-                                            {malzeme}
-                                        </Label>
-                                    </FormGroup>
-                                );
-                            })}
+                        <div className="custom-checkbox-list">
+                            {malzemeListesi.map((malzeme, index) => (
+                                <label
+                                    key={index}
+                                    className={`custom-checkbox ${formData.malzemeler.includes(malzeme) ? "selected" : ""
+                                        }`}
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="ekstraMalzemeler"
+                                        value={malzeme}
+                                        onChange={handleChange}
+                                        disabled={
+                                            formData.malzemeler.length >= 10 &&
+                                            !formData.malzemeler.includes(malzeme)
+                                        }
+                                    />
+                                    <span className="checkbox-icon" />
+                                    {malzeme}
+                                </label>
+                            ))}
                         </div>
                         {errors.malzemeler && <p className="error">{errors.malzemeler}</p>}
                     </div>
+
+
                     <div className="form-group">
                         <Label>Sipariş Notu</Label>
                         <Input
@@ -300,7 +306,14 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
                         </Card>
                     </div>
                 </Form >
+
             </div >
+
+
+            <Footer />
+
+
         </>
+
     );
 }

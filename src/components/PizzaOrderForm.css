@@ -1,271 +1,450 @@
-.form-container {
-    display: flex;
-    justify-content: center;
-    height: 250vh;
-    background-color: white;
+    .form-container {
+        display: flex;
+        justify-content: center;
+        height: 250vh;
+        background-color: white;
 
 
 
-}
+    }
 
-.pizza-description {
-    font-weight: lighter;
-    font-style: italic;
-    font-size: 0.9rem;
-}
+    .pizza-description {
+        font-weight: lighter;
+        font-style: italic;
+        font-size: 0.9rem;
+    }
 
-
-.pizza-order-form {
-    width: 300%;
-    height: 1500px;
-    max-width: 500px;
-    padding: 40px;
-    background-color: white;
-    gap: 50px;
-
-}
-
-.pizza-name {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: left;
-}
-
-.pizza-price-rating {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-
-}
-
-.price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: left;
-
-}
-
-.rating {
-    margin-top: 0.8rem;
-}
-
-
-
-
-#hamur {
-    width: 85px;
-    padding: 5px 10px;
-    font-size: 13px;
-    height: 35px;
-}
-
-.size-dough-section {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.size-dough-section legend {
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.size-section input {
-    font-size: 15px;
-    margin-right: 10px;
-}
-
-.size-section label {
-    font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.dough-section {
-    margin-top: 0px;
-    text-align: left;
-    margin-right: 9px;
-}
-
-.dough-section select {
-    margin-top: -25px;
-    margin-right: 10px;
-}
-
-.ekstra-malzemeler {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.ekstra-malzemeler label {
-    display: flex;
-    align-items: center;
-    font-style: unset;
-    font-size: 15px;
-    gap: 10px;
-}
-
-
-
-
-.form-group h5 {
-    margin-top: 48px;
-    font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.adet-secimi {
-
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 130px;
-    margin-top: 80 px;
-
-
-}
-
-.adet-secimi-label {
-    margin-top: 3rem;
-    font-size: 1.3rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.adet-secimi button {
-    width: 40px;
-    height: 40px;
-    background-color: #FDC913;
-    color: black;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.adet-secimi input[type="number"] {
-    width: 50px;
-    height: 40px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 0;
-
-}
-
-
-
-.card-siparis-ozeti {
-    margin-left: 160px;
-    margin-top: -6rem;
-    background-color: #f9f9f9;
-    width: 18rem;
-    height: 17rem;
-}
-
-.card-siparis-ozeti button {
-    background-color: #FDC913;
-    color: black;
-    font-family: 'Roboto Condensed';
-    font-weight: 600;
-    text-align: center;
-    margin-top: 3rem;
-    margin-left: -1rem;
-    width: 287px;
-    height: 45px;
-
-}
-
-.alici-isim {
-    margin-top: 3rem;
-    font-family: 'Roboto Condensed';
-}
-
-.card-siparis-ozeti-secimler,
-.card-siparis-ozeti-toplam-fiyat {
-    margin-top: 0rem;
-    font-family: 'Roboto Condensed';
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-.error {
-    color: red;
-    font-style: italic;
-}
-
-.hizli-siparis {
-    margin-top: 1.3rem;
-    font-family: 'Roboto Condensed';
-    font-weight: 400;
-
-}
-
-@media (max-width: 980px) {
 
     .pizza-order-form {
-        padding: rem;
+        width: 300%;
+        height: 1500px;
+        max-width: 500px;
+        padding: 40px;
+        background-color: white;
+        gap: 50px;
+
+    }
+
+    .pizza-name {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: left;
     }
 
     .pizza-price-rating {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+
+    }
+
+    .price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+
+    }
+
+    .rating {
+        margin-top: 0.8rem;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .circle-button {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        font-family: 'Roboto Condensed';
+        font-weight: 100;
+        color: #333;
+        cursor: pointer;
+        display: flex;
         align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    }
+
+    .circle-button:hover {
+        background-color: #f2f2f2;
+    }
+
+    .circle-button.selected {
+        background-color: #ffe7b3;
+        border-color: #f5c078;
+        color: #333;
+    }
+
+
+    #hamur {
+        width: 85px;
+        padding: 5px 10px;
+        font-size: 13px;
+        height: 35px;
     }
 
     .size-dough-section {
-        gap: 25px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
 
     }
 
-    .ekstra-malzemeler {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
-    }
-
-    .adet-secimi {
-        gap: 5px;
+    .size-dough-section legend {
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+        font-size: 1.2rem;
     }
 
 
-    .card-siparis-ozeti {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px auto;
+
+    .size-section label {
+        font-size: 1rem;
+        font-family: 'Roboto Condensed';
+        font-weight: 300;
+    }
+
+    .custom-select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 6rem;
+    }
+
+    .custom-select option {
         padding: 10px;
+    }
+
+
+    .custom-checkbox-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-bottom: 3rem;
+
+        justify-content: flex-start;
+    }
+
+    .custom-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        font-family: 'Roboto Condensed';
+        cursor: pointer;
+        flex: 0 0 calc(33.33% - 10px);
+
 
     }
 
-    .card-siparis-ozeti button {
-        width: 80%;
-        margin-left: 1.5rem;
-        font-size: 14px;
-        padding: 12px;
+    .custom-checkbox input {
+        display: none;
+
+    }
+
+    .custom-checkbox .checkbox-icon {
+        width: 35px;
+        height: 35px;
+
+
+        background-color: #FAF7F2;
+        position: relative;
+        transition: all 0.3s;
+    }
+
+    .custom-checkbox.selected .checkbox-icon {
+        background-color: #FDC913;
+
+    }
+
+    .custom-checkbox.selected .checkbox-icon::after {
+        content: '✔';
+        color: white;
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .custom-checkbox:hover .checkbox-icon {
+        border-color: yellow;
+    }
+
+    .custom-checkbox.selected {
+        color: #333;
+    }
+
+
+
+
+
+    .form-group h5 {
+        margin-top: 50px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: 'Roboto Condensed';
+
     }
 
     .adet-secimi {
-        justify-content: center;
-        text-align: center;
-        margin-left: 5rem;
-        margin-top: 5px;
-        gap: 2px;
+
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 130px;
+        margin-top: 80 px;
+
+
     }
 
     .adet-secimi-label {
-        text-align: center;
-        margin-top: 30px;
-        margin-left: 8rem;
+        margin-top: 3rem;
         font-size: 1.3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-    .card-pizza-order button {
-        border-radius: 10px;
-        margin-top: 2rem;
-        height: 3rem;
-        width: 19rem;
-        margin-left: -1.6rem;
+    .adet-secimi button {
+        width: 40px;
+        height: 40px;
+        background-color: #FDC913;
+        color: black;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
 
     }
-}
+
+    .adet-secimi input[type="number"] {
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 0;
+
+    }
+
+
+
+    .card-siparis-ozeti {
+        margin-left: 160px;
+        margin-top: -6rem;
+        background-color: #f9f9f9;
+        width: 18rem;
+        height: 17rem;
+    }
+
+    .card-siparis-ozeti button {
+        background-color: #FDC913;
+        color: black;
+        font-family: 'Roboto Condensed';
+        font-weight: 600;
+        text-align: center;
+        margin-top: 3rem;
+        margin-left: -1rem;
+        width: 287px;
+        height: 45px;
+
+    }
+
+    .alici-isim {
+        margin-top: 3rem;
+        font-family: 'Roboto Condensed';
+    }
+
+    .card-siparis-ozeti-secimler,
+    .card-siparis-ozeti-toplam-fiyat {
+        margin-top: 0rem;
+        font-family: 'Roboto Condensed';
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    .error {
+        color: red;
+        font-style: italic;
+    }
+
+    .hizli-siparis {
+        margin-top: 1.2rem;
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+
+    }
+
+    .order-form-pizza {
+        display: flex;
+        margin-left: 30rem;
+        height: 15rem;
+
+    }
+
+    .footer {
+        margin-top: -9rem;
+        background-color: #121212;
+        color: white;
+        padding: 50px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
+
+    }
+
+    .footer-section img {
+        vertical-align: middle;
+        margin-right: 8px;
+
+    }
+
+    .footer-section p {
+        line-height: 3.5;
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+        margin: 45px 0;
+
+    }
+
+    .footer-section h2,
+    .footer-section h3 {
+        margin-bottom: 50px;
+        font-family: 'Roboto Condensed';
+        font-weight: 600;
+        font-size: 2.2rem;
+    }
+
+
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .footer-section ul li {
+        margin-bottom: 18px;
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+
+    }
+
+
+
+    .footer-section a {
+        color: #f0f0f0;
+        text-decoration: none;
+        gap: 2rem;
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+    }
+
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .instagram-grid img {
+        width: 80%;
+        border-radius: 6px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 980px) {
+
+        .pizza-order-form {
+            padding: rem;
+        }
+
+        .pizza-price-rating {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .size-dough-section {
+            gap: 25px;
+
+        }
+
+        .ekstra-malzemeler {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+        }
+
+        .adet-secimi {
+            gap: 5px;
+        }
+
+
+        .card-siparis-ozeti {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+
+        }
+
+        .card-siparis-ozeti button {
+            width: 80%;
+            margin-left: 1.5rem;
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        .adet-secimi {
+            justify-content: center;
+            text-align: center;
+            margin-left: 5rem;
+            margin-top: 5px;
+            gap: 2px;
+        }
+
+        .adet-secimi-label {
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 8rem;
+            font-size: 1.3rem;
+        }
+
+        .card-pizza-order button {
+            border-radius: 10px;
+            margin-top: 2rem;
+            height: 3rem;
+            width: 19rem;
+            margin-left: -1.6rem;
+
+        }
+    }
