@@ -8,6 +8,7 @@
 
     }
 
+
     .pizza-description {
         font-weight: lighter;
         font-style: italic;
@@ -124,7 +125,7 @@
     .custom-checkbox-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 5px;
         padding-bottom: 3rem;
 
         justify-content: flex-start;
@@ -133,8 +134,8 @@
     .custom-checkbox {
         display: flex;
         align-items: center;
-        gap: 5px;
-        font-size: 0.8rem;
+        gap: 15px;
+        font-size: 0.9rem;
         font-weight: 400;
         font-family: 'Roboto Condensed';
         cursor: pointer;
