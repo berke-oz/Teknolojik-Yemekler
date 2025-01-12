@@ -4,6 +4,7 @@ import './PizzaOrderForm.css'
 import Header from "./Header";
 import axios from "axios"
 import Footer from "./Footer";
+import formBanner from "/images/iteration-2-images/pictures/form-banner.png";
 
 
 
@@ -107,7 +108,7 @@ export default function PizzaOrderForm({ onSubmitOrder }) {
             <header>
                 <Header />
             </header>
-            <img className="order-form-pizza" src="./images/iteration-2-images/pictures/form-banner.png" alt="" />
+            <img className="order-form-pizza" src={formBanner} alt="" />
             <div className="form-container">
 
                 <Form className="pizza-order-form" onSubmit={handleSubmit}>
