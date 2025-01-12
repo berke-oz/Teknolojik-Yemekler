@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css'
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Col, Container, Navbar, NavbarBrand, NavItem, NavLink, Row } from "reactstrap";
 import Footer from "./Footer";
+import homeBanner from '/images/iteration-1-images/home-banner.png';
 import logo from '/images/iteration-1-images/logo.svg';
 import icon1 from '/images/iteration-2-images/icons/1.svg';
 import icon2 from '/images/iteration-2-images/icons/2.svg';
@@ -22,7 +23,16 @@ export default function Home({ onButtonClick }) {
 
     return (
         <>
-            <header className="header">
+            <header style={{
+                backgroundImage: `url(${homeBanner})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                color: '#ffffff',
+                textAlign: 'center',
+                padding: '30px 20px',
+                height: '100vh',
+            }} className="header">
                 <div className="header-content">
                     <img className="logo" src={logo} alt="" />
                     <p className="header-subtitle">fırsatı kaçırma</p>

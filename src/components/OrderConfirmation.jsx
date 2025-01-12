@@ -1,6 +1,7 @@
 import React from "react";
 import './OrderConfirmation.css'
 import { Card, CardBody, CardText, CardTitle } from "reactstrap";
+import logo from '/images/iteration-1-images/logo.svg';
 
 export default function OrderConfirmation({ orderData }) {
 
@@ -10,7 +11,7 @@ export default function OrderConfirmation({ orderData }) {
         <div className="order-conformation-page">
 
             <div className="center-container">
-                <img src="/images/iteration-1-images/logo.svg" alt="" />
+                <img src={logo} alt="" />
                 <p>Lezzetin yolda</p>
                 <h4>SİPARİŞ ALINDI</h4>
                 <hr />
